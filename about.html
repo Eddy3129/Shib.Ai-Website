@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" >
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+        .bg{
+            background-color: #f1e8d7;
+            opacity:1.0;
+        }
+
+        .container{
+            display:flex;
+            max-width:90%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+          }
+
+        .content {
+            display: flex;
+            flex: 1 1 65%;
+            flex-direction: column;
+            padding: 30px;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            max-width:90%;
+     
+          }
+        
+          .text-container {
+            padding: 10px;
+            margin: 2%;
+            
+          }
+          
+          .title-container {
+            font-size: 3em;
+            height:40px;
+            width:30%;
+            padding:25px;
+            color: #5c3624;
+            border-radius: 30px;
+            font-family: "LePetitCochon";
+            text-align: left;
+            background-image: url('../Group_42/images/Decorative/cloud.svg');
+            background-position: left top -30px;
+            background-size: cover; 
+            text-decoration: underline;
+            padding-left:15%;
+          }
+          
+          .desc-container{
+            font-size: 20px;
+            padding:15px;
+            font-family: "Belleza";
+            color: #fff;
+            border-radius: 30px;
+            background-color: #c69974;
+            border:#fff solid 10px;
+            text-align: justify;
+            text-indent: 50px;
+          }
+        
+          .imagebox {
+            display: flex;
+            flex: 1 1 35%;
+            justify-content: flex-start; /* Move the image to the right */
+          }
+          
+          .imagebox img {
+            width: 80%;
+          }
+
+        
+          .newsletter {
+            background-color: #e87000;
+            display: flex;
+            flex-direction: row; /* Align children in a column */
+            justify-content:center;
+            padding-top: 2%;
+            padding-bottom: 8%;
+            padding-right:5%;
+            text-align: center;
+            border-top-left-radius: 40%;
+            border-top-right-radius: 40%;
+            font-family: "LePetitCochon";
+            color: #f7f3eb;
+            font-size: 25px;
+            height:50px;
+            
+          }
+
+          .newsletter-text {
+            margin-bottom: 10px; 
+            font-size: xx-large;
+        }
+
+        .shiba-letter {
+            height:110px;
+            margin-bottom: 50px;
+        }
+        
+          .emailfield {
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+          }
+          
+          .email-input {
+            width: 80%; 
+            font-size: large;
+            margin-right: 10px; 
+          }
+
+          .button{
+            display: flex;
+            padding: 8px;
+            border-color: #b20000;
+            background-color: #d44c3d;
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'LePetitCochon';
+            color: #fff965;
+            font-weight: bold;
+            font-size:large;
+            white-space: nowrap;
+          }
+                   
+        
+</style>
+
+<nav>
+    <div class="logo"><img src="../Group_42/images/Logo/Shib.aI-logo.svg" alt="Logo"></div>
+    <a href="homepage.html">SHIB.AI</a>
+    <a href="interaction.html">INTERACT</a>
+    <a href="marketplace.html">MARKET</a>
+    <a class="thispage">ABOUT</a>
+    <a href="contactus.html">CONTACT</a>
+    <a id="logout" href="#">LOGOUT</a>
+</nav>
+
+<body>
+    <div class="bg"></div>
+    <div class='container'>
+        <div class="content">
+            <div class="text-container">
+                <div class="title-container">
+                   ABOUT 
+                </div>
+                <div class="desc-container"> Shib.Ai, short for the 'Shiba' dog breed and the world 'AI', is an interactive pet companion bot powered by our latest AI model - PetGPT 3.0. This pet model was developed in accordance with our vision, which is to develop a virtual platform to inspire and offer companionship to people, particularly those who are now experiencing mental health issues throughout Malaysia. Through this initiative, we aim to spread awareness about mental health to help people find hope and optimism.</div>
+            </div> 
+        </div>
+        <div class="imagebox">
+            <img src="../Group_42/images/Shiba/shiba_in_box.svg" alt="Shiba in a box">
+        </div>
+    </div>
+        
+
+    <div class="newsletter">
+        <div>
+            <img class="shiba-letter" src="../Group_42/images/Shiba/shiba-letter.svg" height="172.2" width="175" alt="Shiba-Letter Image">
+        </div>
+        <div>
+        <div class="newsletter-text">DROP YOUR EMAIL HERE SO YOU DON'T MISS ANY LATEST UPDATES FROM US!</div>
+        <div class="emailfield">
+            <input type="mail" placeholder="Your email here..." class="email-input">
+            <button class="button" onclick="sub()">SUBSCRIBE TO NEWSLETTER</button>
+        </div>
+        </div>
+    </div>
+
+
+    </body>
+    
+    <footer class="footer">
+      <div class="footer-buttons">
+        <a href="homepage.html" class="footer-button">SHIB.AI</a>
+        <a href="interaction.html" class="footer-button">INTERACTION</a>
+        <a href="marketplace.html" class="footer-button">MARKETPLACE</a>
+        <a href="about.html" class="footer-button">ABOUT US</a>
+        <a href="contactus.html" class="footer-button">CONTACT US</a>
+        <div id="social_media">
+          <b><p>SOCIAL MEDIA</p></b>
+          <a href="https://facebook.com" target="blank"><img src="../Group_42/images/Logo/fb-logo.svg" alt="Facebook" class="social-media-logo"></a>
+          <a href="https://instagram.com" target="blank"><img src="../Group_42/images/Logo/ig-logo.svg" alt="Instagram" class="social-media-logo"></a>
+          <a href="https://gmail.com" target="blank"><img src="../Group_42/images/Logo/gmail-logo.svg" alt="Email" class="social-media-logo"></a>
+        </div>
+      </div>
+      <p class="footer-text">Copyright© Web Fundamentals Group 42. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function sub() {
+          alert('Thank you for subscribing to our newsletter!');
+        }
+    </script>
+</html>
+
+

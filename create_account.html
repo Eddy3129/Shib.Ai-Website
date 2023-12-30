@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="css/style.css">
+  <title>Create Account Page</title>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+  <style>
+   
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #formContainer {
+      text-align: center;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      border-radius: 30px;
+      border-width: 10px;
+      border-style: solid;
+      border-color:#745e4d;
+      color:#4d4c4c;
+      width: 300px;
+    }
+
+    #titleContainer {
+      background-color: #9eddff;
+      padding:10px;
+      margin: -20px -20px 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      font-family: "Frankfurter";
+    }
+
+    #titleContainer h2{
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #titleContainer p{
+      font-size: 13px;
+      margin: 0;
+      padding: 0;
+    }
+    
+
+    #titleContainer a{
+      color:#a43535;
+    }
+
+ 
+    #createAccountForm label {
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+      font-family: "Gagalin";
+    }
+
+    #createAccountForm input {
+      display: block;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    #createAccountForm a{
+      text-decoration: none;
+    }
+
+    #createAccountForm input[type="submit"] {
+      font-family: "Frankfurter";
+      text-align: center;
+      color:white;
+      padding: 10px 20px;
+      background-color: #745e4d;
+      border-style: solid;
+      border-width: 5px;
+      border-color:#745e4d;
+      border-radius: 10px;
+      font-size:x-large;
+      width:50%;
+      margin:0 auto;
+    }
+
+    
+
+    #termsContainer {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    #termsContainer input {
+      height:20px;
+      display:flex;
+      width:8%;
+    }
+
+    #termsContainer p{
+      font-family: 'Belleza';
+      font-size: small;
+      height:100%;
+      display:flex;
+      flex-wrap: wrap;
+      flex:7;
+      margin:10px;
+    }
+
+    
+
+
+  </style>
+</head>
+
+<div class="bg" style="background-color:#f3f3f1; opacity:0.7"></div>
+
+<body>
+
+  <div id="formContainer">
+  <div id="titleContainer">
+    <h2 class="title">Create Account</h2>
+    <p>Already Registered An Account? <a href="../Group_42/login.html">LOGIN NOW</a></p>
+  </div>
+  <form id="createAccountForm" action="../Group_42/login.html">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" required>
+
+    <div id="termsContainer">
+      <input type="checkbox" id="termsAndConditions" required>
+      <label for="termsAndConditions">
+        <p>By clicking 'Sign  Up', you agree to our company's <a href="#">  Terms and Conditions</a></label></p>
+    </div>
+
+    <input type="submit" value="SIGN UP">
+  </form>
+</div>
+
+<footer class="footer" style="height:40px">
+  <p class="footer-text">Copyright© Web Fundamentals Group 42. All Rights Reserved. </p>
+</footer>
+
+</body>
+
+<script>
+  function validateForm() {
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match. Please enter the same password in both fields.");
+      return false; // Prevent form submission
+    }
+
+    // If the passwords match, the form will submit as usual
+    return true;
+  }
+
+  document.getElementById('createAccountForm').addEventListener('submit',(event)=>{
+    if (!validateForm()){
+      event.preventDefault();
+    }else{
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    localStorage.setItem(username, password);
+    alert('Signed up successfully! Navigating to Login page...');
+    window.location.href ="../Group_42/login.html";
+  }
+});
+
+</script>
+
+</html>
+
+

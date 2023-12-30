@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaction</title>
+</head>
+  <style>
+
+    .upper-div {
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height:50%;
+    }
+
+
+    .lower-div {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .inventory {
+      display: flex;
+      flex-direction: column;
+      margin-left:30px;
+      background-color: white; 
+      height: 300px; 
+      border: solid 4px #4a0074;
+      border-radius: 10px; 
+      margin-left: 40px;
+      margin-right: 40px; 
+      transform: scale(0.8);
+    }
+
+    .inventory-title {
+      border-bottom: 3px solid #4a0074;
+      text-align: center;
+      font-family: 'Frankfurter';
+      color: #4A0074;
+    }
+
+    .inventory-children {
+      display: flex;
+      flex-direction: row;
+      height: 300px;
+      border-top: 2px solid #4a0074;
+      
+    }
+
+    .doge-pack {  
+      flex: 0.4;
+      padding-left: 30px;
+      padding-right:30px;
+      border-right: 4px solid #4a0074;
+      height: 94%;
+      font-size: large;
+    }
+
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 20px;
+        height: 100%;
+        transform: scale(0.8);
+    }
+
+    .item {
+      border: 1px solid #4a0074;
+      background:linear-gradient(#fff7ad,#ffa9f9);
+      border-color: #364182;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 30px;
+      margin-top: -12px;
+      width:60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doge-pack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .doge-pack h1 {
+      font-family: 'Gagalin'; 
+      font-size: 30px; 
+      text-align: center;
+    }
+
+
+    .doge-pack img {
+        width: 50px;   
+        height: auto;
+    }
+
+    .item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pet-gif {
+      display:flex;;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(purple,#ffa9f9);
+      border-radius: 50%;
+    }
+
+    .pet-gif img{
+      width:90%;
+    }
+
+    
+
+    .pet-status {
+      text-align: auto;   /* Align text to the left */
+      background-color: white;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: space-between;   /* Spacing between the content elements */
+      border: solid 4px #4a0074;
+      border-radius: 10px;  /*makes the edges curved*/
+      margin-left: 40px;
+      margin-right: 40px;
+      transform: scale(0.8);
+    }
+
+    .logo-and-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+
+    .pet-status-logo {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      margin-left: 20px;
+
+    }
+
+    .pet-status h1,
+    .pet-status h2,
+    .pet-status h3,
+    .pet-status p {
+      margin: 0;
+    }
+
+    .pet-status h1 {
+      font-family: 'Frankfurter';
+      color: #4A0074;
+    }
+
+    .pet-status h2 {
+      font-size: 25px;
+      font-family: 'Gagalin';
+    }
+    
+    .stats-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align stat headers to the left */
+    }
+
+    .stats {
+      display: flex;
+      align-items: left;;
+      font-size: 30px;
+      margin-top: 15px;
+      transform: scale(0.8);
+    }
+
+    .stats h3.stats-header {
+      margin-left: 10px;
+    }
+
+    .pet-status-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .pet-id {
+      font-size: 16px;
+      margin-left: 10px; 
+      font-family: 'Gagalin';
+    }
+
+    .dailybutton-div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dailybutton {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .chatbox-container {
+      display: flex;
+      justify-content: center;
+      margin-right: 300px;
+      margin-top: 20px;
+    }
+
+    .chatbox {
+      align-items: center;
+      justify-content: center;
+      border-color: #4a0074;
+      border-style: solid;
+      border-width: 4px;
+      border-radius: 10px;
+      resize: none;
+    }
+
+    .chatbox textarea {
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box; /* Ensure the border wraps around the content */
+      resize: none;
+    }
+
+    .submit-button {
+      margin-top: 40px;
+      margin-left: 10px;
+      height:40px;
+      width:75px; 
+      background:linear-gradient(#fff7ad,#ffa9f9);
+      border-color: #4a0074;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 15px;
+      font-family: 'Frankfurter';
+      font-size: 15px; 
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .activitybutton-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .activitybutton {
+      margin:0 50px;
+      padding: 0;
+      border: none;
+      background: none;
+    }
+
+    .meter-1::-webkit-meter-optimum-value {
+      background-color: red; /* Red color for the first meter */
+    }
+
+    .meter-2::-webkit-meter-optimum-value {
+      background-color: #4CAF50; /* Green color for the second meter */
+    }
+
+    .meter-3::-webkit-meter-optimum-value {
+      background-color: #FFC107; /* Yellow color for the third meter */
+    }
+
+    .meter-1,
+    .meter-2,
+    .meter-3 {
+      height: 30px; 
+      width: 300px;
+      transform: scale(0.8);
+    }
+
+    .meter-1 {
+      margin-left: 11px;
+    }
+
+    .meter-2 {
+      margin-left: 16px;
+    }
+
+    .meter-3 {
+      margin-left: 49px;
+      margin-bottom: 68px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><img src="../Group_42/images/Logo/Shib.aI-logo.svg" alt="Logo"></div>
+    <a href="homepage.html">SHIB.AI</a>
+    <a class="thispage">INTERACT</a>
+    <a href="marketplace.html">MARKET</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contactus.html">CONTACT</a>
+    <a id="logout" href="homepage.html">LOGOUT</a>
+    <div class="navcoin" onmouseover="alert('You have 5400 coins!')"><img src="../Group_42/images/shiba-coin.svg" alt="coins">5400</div>
+  </nav>
+
+  <main>
+    <div class="bg"></div>
+
+    <div class="upper-div">
+      <div class="inventory">
+            <div class="inventory-title">
+                <h1>Inventory</h1>
+            </div>
+            <div class="inventory-children">
+              <div class="inventory-child">
+                <div class="doge-pack">
+                <h1>Doge Pack</h1>
+                  <img src="../Group_42/images/Interact/DogePack.png" alt="Image description">
+                  <p style="font-family: 'Gagalin';">9/12</p>
+              </div>
+            </div>
+
+            <div class="inventory-child">
+                <div class="image-grid">
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/energy-snax.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/energy-snax.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/capa-da-supra.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/vitality-potion.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/capa-da-supra.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/vitality-potion.svg" alt="Image description" />
+                  </div>
+                  <div class="item">
+                      <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image description" />
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  
+      <div class="pet-gif">
+          <img src="../Group_42/images/Shiba/shibai-no-background.gif" alt="Pet GIF">
+        </div>
+
+      <div class="pet-status">
+        <div class="logo-and-header">
+          <div class="pet-status-info">
+            <img class="pet-status-logo" src="../Group_42/images/Interact/PetStatusLogo.png" alt="Logo">
+            <div>
+              <h1>SHIB.AI</h1>
+              <h2>SHIB LVL 69</h2>
+              <p class="pet-id">Pet ID: shiba#1125</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-container">
+          <div class="stats">
+            <h3 class="stats-header">Hunger</h3>
+            <meter value="40" min="0" max="100" class="meter-1"></meter>
+          </div>
+          <div class="stats">
+            <h3 class="stats-header">Energy</h3>
+            <meter value="80" min="0" max="100" class="meter-2"></meter>
+          </div>
+          <div class="stats">
+            <h3 class="stats-header">Fun</h3>
+            <meter value="60" min="0" max="100" class="meter-3"></meter>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+    <div class="lower-div">
+      <div class="dailybutton-div">
+      <button class="dailybutton">
+        <img src="../Group_42/images/Interact/Dailybutton.png" alt="Placeholder" height="40%" width="40%">
+      </button>
+      </div>
+
+      <div class="chatbox-container"> 
+        <div class="chatbox">
+          <textarea type="text" id="message-input" rows="5" cols="60" placeholder="Speak to your Shib.AI..."></textarea>
+        </div> 
+        <button class="submit-button">Send</button>
+      </div>
+    </div>
+
+    <div class="activitybutton-container">
+        <button class="activitybutton">
+          <img src="../Group_42/images/Interact/PatButton-removebg-preview.png" alt="Pat" height="70" width="110">
+        </button>
+
+        <button class="activitybutton">
+          <img src="../Group_42/images/Interact/FeedButton-removebg-preview.png" alt="Feed" height="70" width="110">
+          
+        </button>
+        <button class="activitybutton">
+          <img src="../Group_42/images/Interact/SleepButton-removebg-preview.png" alt="Sleep" height="70" width="110">
+        </button>
+    </div>
+    
+</body>
+</main>
+
+<footer class="footer">
+  <div class="footer-buttons">
+    <a href="homepage.html" class="footer-button">SHIB.AI</a>
+    <a href="interaction.html" class="footer-button">INTERACTION</a>
+    <a href="marketplace.html" class="footer-button">MARKETPLACE</a>
+    <a href="about.html" class="footer-button">ABOUT US</a>
+    <a href="contactus.html" class="footer-button">CONTACT US</a>
+    <div id="social_media">
+      <b><p>SOCIAL MEDIA</p></b>
+      <a href="https://facebook.com" target="blank"><img src="../Group_42/images/Logo/fb-logo.svg" alt="Facebook" class="social-media-logo"></a>
+      <a href="https://instagram.com" target="blank"><img src="../Group_42/images/Logo/ig-logo.svg" alt="Instagram" class="social-media-logo"></a>
+      <a href="https://gmail.com" target="blank"><img src="../Group_42/images/Logo/gmail-logo.svg" alt="Email" class="social-media-logo"></a>
+    </div>
+  </div>
+  <p class="footer-text">Copyright© Web Fundamentals Group 42. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
+
+<script>
+  function handlePatButtonClick() {
+    const patmessage = "Shiba loves pats!";
+    alert(patmessage);
+  } 
+  function handleFeedButtonClick() {
+    const feedmessage = "Shiba is enjoying the food!";
+    alert(feedmessage);
+  }
+  function handleSleepButtonClick() {
+    const sleepmessage = "Shiba is taking a nap!";
+    alert(sleepmessage);
+  }
+
+  function handleDailyButtonClick() {
+    const dailymessage = "300 coins have been claimed today!";
+    alert(dailymessage);
+  }
+
+  function handleSendButtonClick() {
+    const sendmessage = "Hello dear master! Wish you a nice day ahead!";
+    alert(sendmessage);
+  }
+
+  const patButton = document.querySelector(".activitybutton:nth-child(1)");
+  const feedButton = document.querySelector(".activitybutton:nth-child(2)");
+  const sleepButton = document.querySelector(".activitybutton:nth-child(3)");
+  const dailyButton = document.querySelector(".dailybutton:nth-child(1)");
+  const sendButton = document.querySelector(".submit-button");
+
+  patButton.addEventListener("click", handlePatButtonClick);
+  feedButton.addEventListener("click", handleFeedButtonClick);
+  sleepButton.addEventListener("click", handleSleepButtonClick);
+  dailyButton.addEventListener("click", handleDailyButtonClick);
+  sendButton.addEventListener("click", handleSendButtonClick); 
+
+</script>

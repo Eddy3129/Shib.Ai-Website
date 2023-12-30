@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/style.css">
+
+<head>  
+  <title>Marketplace</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    .upper-div {
+      display: flex;
+      padding-left:28px;
+      padding-right:28px;
+      padding-top: 15px;
+      padding-bottom: 5px;
+    }
+
+    .header{
+      display:flex;
+      flex:1.5;
+      background-image:url(../Group_42/images/Marketplace/marketplace_header.svg);
+      background-position: center +5px;
+      background-size: 100% 100%;
+      text-align:center;
+      font-family: "Gagalin";
+      font-size:25px;
+      color:#4a0074;
+      justify-content: center;
+    }
+
+    .subheader{
+      display:flex;
+      flex:1;
+      align-items: center;
+      justify-content: center;
+      font-family: "LePetitCochon";
+      font-size:2em;
+      border-radius: 40px;
+      border-width: 10px;
+      border-style: solid;
+      height:55px;
+      margin: auto;
+      white-space: nowrap;
+    }
+
+    .subheader p{
+      margin-right:16px;
+    }
+
+    .subheader img{
+      width: 60%;
+    }
+
+    #foodie{
+      background:linear-gradient(to right,#ff66c4,#ffde59);
+      border-color:#b20000;
+      color:#b20000;
+      padding-right: 15px;
+      margin-left:60px;
+      padding-top:5px;
+    }
+
+    #foodie img{
+      margin-right:10px;
+    }
+
+    #power-up{
+      background:linear-gradient(to right,#ff5757,#8c52ff);
+      border-color:#ffde59;
+      color:#ffed00;
+      text-shadow: 00 0 20px #fff965 ;
+      font-family: "ColoPro";
+      padding-left: 15px;
+      margin-right:60px;
+    }
+
+
+    .lower-div {
+      background:linear-gradient(135deg,#fbead9,#c3e5db,#cc66c4);
+      display: flex;
+      justify-content: space-evenly;
+      width:75%;
+      margin:auto;
+      border-radius: 30px;
+      border-width: 10px;
+      border-style: solid;
+      border-color:#364182;
+      padding-bottom: 5px;
+    }
+
+    .scroll-container{
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      max-height:46vh;
+      gap:10px;
+      padding:12px;
+    }
+
+    .item-div{
+      font-family: "Gagalin";
+      height:50%; 
+    }
+   
+    .title-container{
+      height:32px;
+      width:200px;
+      border-width:6px;
+      border-color: #364182;
+      border-style: solid;
+      border-width: 8px;
+      border-radius: 30px;
+      font-size:x-large;
+      font-family:"Frankfurter";
+      color:#4a0074;
+      margin-bottom: 0.5px;
+      background-color: #d4fffc;
+      padding-left:10px;
+      padding-right:10px;
+    }
+
+    .item-box-container {
+      border-color: #364182;
+      border-style: solid;
+      border-width: 8px;
+      border-radius: 30px;
+      background-color:#ffffff;
+      display:flex;
+      justify-content: center;
+      height:105px;
+      width:440px;
+
+    }
+
+    .image-box {
+      display:flex;
+      border-color: #364182;
+      border-style: solid;
+      border-width: 5px;
+      border-radius: 30px;
+      background:linear-gradient(#fff7ad,#ffa9f9);
+      align-items:center;
+      justify-content:center;
+      margin:10px;
+      width:80px;
+      height:80px;
+    }
+
+    .image-box img{
+      object-fit: contain;
+      height:100%;
+    }
+
+    .text{
+    display:flex;
+    font-size: 14.5px;
+    text-align: justify;
+    color: #364182;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .shibabutton{
+    border-color:  #364182;;
+    background:linear-gradient(#ff3131,#ff914d);
+    border-width: 0px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "ColoPro";
+    font-size:x-large;
+    color:#ffd501;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left:10px;
+    height:100%;
+    width:75px;
+    }
+
+    .shibabutton img, .shibabutton text{
+      display:flex;
+      flex:1;
+    }
+
+    .shibabutton img{
+      width:90%;
+    }
+
+</style>
+
+<nav>
+  <div class="logo"><img src="../Group_42/images/Logo/Shib.aI-logo.svg" alt="Logo"></div>
+  <a href="homepage.html">SHIB.AI</a>
+  <a href="interaction.html">INTERACT</a>
+  <a class="thispage">MARKET</a>
+  <a href="about.html">ABOUT</a>
+  <a href="contactus.html">CONTACT</a>
+  <a id="logout" href="homepage.html">LOGOUT</a>
+  <div class="navcoin" onmouseover="alert('You have 5400 coins!')"><img src="../Group_42/images/shiba-coin.svg" alt="coins">5400</div>
+ </nav>
+
+<body>
+  <div class="bg"></div>
+  <div class="upper-div">
+    <div class="subheader" id="foodie">
+      <img src="../Group_42/images/Shiba/shiba-ramen.svg" alt="Marketplace Icon">
+      <p style="margin-left:5px">FOODIES & GOODIES</p>
+    </div>
+    <div class="header">
+      <h1>Marketplace</h1>
+    </div>
+    <div class="subheader" id="power-up">
+     <p>POWER-UPS</p>
+     <img src="../Group_42/images/Shiba/shiba-rocket.svg">
+    </div>
+  </div>
+
+  <div class="lower-div">
+    <div class="scroll-container">
+      <div class="item-div">
+        <div class="title-container">ENERGY SNAX</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/energy-snax.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>Relieve you pet's hunger and rejuvenate his/her energy back with the every-pet favorite Energy Snax!
+          </div>
+          <div>
+            <button class="shibabutton" onclick="purchase('Energy Snax','25x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              25x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-div">
+        <div class="title-container">WHOPPY BONY</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>If you have a playful one, this bony will make his/her leisure time ten times better. increases happiness and loyalty by 25%.
+          </div>
+          <div>
+            <button class="shibabutton" onclick="purchase('Whopy Bony','50x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              50x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-div">
+        <div class="title-container">WHOPPY BONY</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>If you have a playful one, this bony will make his/her leisure time ten times better. increases happiness and loyalty by 25%.
+          </div>
+          <div>
+            <button class="shibabutton" onclick="purchase('Whopy Bony','50x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              25x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-div">
+        <div class="title-container">WHOPPY BONY</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>If you have a playful one, this bony will make his/her leisure time ten times better. increases happiness and loyalty by 25%.
+          </div>
+          <div>
+            <button class="shibabutton" onclick="purchase('Whopy Bony','50x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              25x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+          
+    <div class="scroll-container">
+      <div class="item-div">
+        <div class="title-container">VITALITY POTION</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/vitality-potion.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>oh no, looks like your pet is ill! no worries, this potion will cure all sorts of illness and rejuvenates his/her health in no time.
+          </div>
+          <div>
+            <button class="shibabutton" onclick="purchase('Vitality Potion','100x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              100x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-div">
+        <div class="title-container">CAPA DA SUPRA</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/capa-da-supra.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>it's a bird? it's a dog? no, it's super-shiba! THis SUPER CAPE WILL ADVANCE YOUR PET TO THE NEXT LEVEL AND GRANTS HIM/HER WITH THE ABILITY OF FLYING. UP-UP-AND-AWAY!
+          </div>
+          <div>
+            <button class="shibabutton"  onclick="purchase('Capa Da Supra','500x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              500x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-div">
+        <div class="title-container">WHOPPY BONY</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>If you have a playful one, this bony will make his/her leisure time ten times better. increases happiness and loyalty by 25%.
+          </div>
+          <div>
+            <button class="shibabutton"  onclick="purchase('Whopy Bony','50x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              25x
+            </button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="item-div">
+        <div class="title-container">WHOPPY BONY</div>
+        <div class="item-box-container">
+          <div class="image-box"> 
+              <img src="../Group_42/images/Marketplace/whoppy-bony.svg" alt="Image">
+          </div>
+          <div class="text">
+            <p>If you have a playful one, this bony will make his/her leisure time ten times better. increases happiness and loyalty by 25%.
+          </div>
+          <div>
+            <button class="shibabutton"  onclick="purchase('Whopy Bony','50x')">
+              <img src="../Group_42/images/shiba-coin.svg" alt="Shiba Coin">
+              25x
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div> 
+    </body>
+    
+    <footer class="footer">
+      <div class="footer-buttons">
+        <a href="homepage.html" class="footer-button">SHIB.AI</a>
+        <a href="interaction.html" class="footer-button">INTERACTION</a>
+        <a href="marketplace.html" class="footer-button">MARKETPLACE</a>
+        <a href="about.html" class="footer-button">ABOUT US</a>
+        <a href="contactus.html" class="footer-button">CONTACT US</a>
+        <div id="social_media">
+          <b><p>SOCIAL MEDIA</p></b>
+          <a href="https://facebook.com" target="blank"><img src="../Group_42/images/Logo/fb-logo.svg" alt="Facebook" class="social-media-logo"></a>
+          <a href="https://instagram.com" target="blank"><img src="../Group_42/images/Logo/ig-logo.svg" alt="Instagram" class="social-media-logo"></a>
+          <a href="https://gmail.com" target="blank"><img src="../Group_42/images/Logo/gmail-logo.svg" alt="Email" class="social-media-logo"></a>
+        </div>
+      </div>
+      <p class="footer-text">Copyright© Web Fundamentals Group 42. All Rights Reserved.</p>
+    </footer>
+
+  <script>
+    function purchase(itemName, itemPrice) {
+      const message = `You have purchased 1 x ${itemName} at the price of ${itemPrice} coins!`;
+      alert(message);
+    }
+  </script>

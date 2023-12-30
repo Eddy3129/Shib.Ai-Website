@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/style.css">
+<head>  
+  <title>Shib.Ai</title>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+  <style>
+
+  button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1 1 65%;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width:90%;
+  }
+  
+  section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;   
+      background-image: url('../Group_42/images/background.svg');
+      background-repeat: repeat;
+      background-color: #ff72bd;
+      background-size: 70px 70px;
+      opacity: 0.5;
+  }
+
+  
+  .bg2 {
+    background-image: url('../Group_42/images/background.svg');
+    background-color: #f1e8d7;
+    background-repeat: repeat;
+    background-size: 70px 70px;
+  }
+
+  .section-container{
+    display:flex;
+    max-width:90%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-and-button{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right:25%;
+  }
+
+  .text-container {
+    padding: 10px;
+    margin: 2%;
+    border-radius: 30px;
+    background-size: 100%;
+    background-color: #f2f0ea;
+    max-width: 100%;
+  }
+  
+  .title-container {
+    width:100%;
+    font-size: 2.5em;
+    color: #745e4d;
+    border-radius: 30px;
+    font-family: "HomemadeApple";
+    white-space: nowrap;
+  }
+  
+  .desc-container{
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: "Belleza";
+    color: #745e4d;
+  }
+
+  .image-and-button img{
+    height:150px;
+  }
+
+  .imagebox {
+    display:flex;
+    flex: 1 1 35%;
+    max-width:100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagebox img{
+    max-width:100%;
+  }
+
+ 
+  
+  .button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    color: #fff;
+    padding:20px;
+    font-size: xx-large;
+    border-radius: 30px;
+    font-family: "LePetitCochon";
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .button img{
+    height:40px;
+    margin-left:5px;
+  }
+
+  
+  #first-section{
+    background: radial-gradient(#f2f0ea, #dd7772);
+    border-radius: 10%;
+    margin: 15px;
+    padding:20px;
+    width:100%;
+  }
+
+
+  #third-section{
+    border-radius:30px;
+    border-width:30px;
+    border-style: solid;
+    border-color: brown;
+    background-color: #fbead9;
+  }
+ 
+  
+.double-down{
+  height:55px;
+  margin-left: 45px;
+}
+
+#round-img-border{
+  border-radius: 50%;
+  border-color: #838383;
+  border-width: 15px;
+  border-style: solid;
+}
+#round-img-bg{
+  border-radius: 50%;
+  border-color: #838383;
+  border-width: 15px;
+  border-style: solid;
+  background: linear-gradient(#ff66c4,#ffde59);
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .section-container{
+    flex-direction: column;
+  }
+
+  .imagebox{
+    max-width: 40%;
+  }
+  
+  .title-container{
+    font-size: 1.5em;
+  }
+  .title-container img{
+    max-width:15%;
+  }
+  .desc-container{
+    font-size: 1em;
+  }
+  .button{
+    font-size: 1em;
+    padding:10px;
+  }
+  .button img{
+    height:10px;
+  }
+
+  .double-down{
+    margin-left:0;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width:1000px){
+  
+  .section-container{
+    flex-direction: column;
+  }
+
+  .imagebox{
+    max-width: 40%;
+  }
+  
+  .title-container{
+    font-size: 1.5em;
+  }
+  .title-container img{
+    max-width:15%;
+  }
+  .desc-container{
+    font-size: 1em;
+  }
+  .button{
+    font-size: 1em;
+    padding:10px;
+  }
+  .button img{
+    height:10px;
+  }
+
+  .double-down{
+    margin-left:0;
+  }
+}
+
+  </style>
+
+
+  <nav>
+    <div class="logo"><img src="../Group_42/images/Logo/Shib.aI-logo.svg" alt="Logo"></div>
+    <a class="thispage">SHIB.AI</a>
+    <a href="interaction.html">INTERACT</a>
+    <a href="marketplace.html">MARKET</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contactus.html">CONTACT</a>
+    <a id="login" href="login.html">LOGIN</a>
+   </nav>
+
+<body>
+  
+    <section id="section1">
+      <div class="section-container">
+        <div class="imagebox" id="first-section">
+            <img src="../Group_42/images/Shiba/Shib.aI home pg 1.svg" alt="Section 1 Image">
+        </div>
+        <div class='content'>
+          <div class="text-container">
+            <div class="title-container">
+              <img src='../Group_42/images/Decorative/paw.svg' alt='logo'>Sign up and adopt now!
+            </div>
+            <div class="desc-container">Shib.Ai is a virtual pet that can <br>make your day better.</div>
+          </div>
+          <button class="button" onclick="location.href='../Group_42/create_account.html'">
+              OWN A PET TODAY!     
+                <img style="margin-left:10px" src="../Group_42/images/Decorative/heart paw.svg" >
+          </button> 
+          <a href="#section2"><img class="double-down" src="../Group_42/images/Decorative/arrow.svg" alt="double down button"></a>   
+        </div>
+      </div>
+    </section>
+
+    <section class="bg2" id="section2">
+      <div class="section-container">
+          <div class='content'>
+              <div><img src="../Group_42/images/Shiba/shiba-spacedog.svg"></div>
+              <div class="text-container">
+                  <div class="title-container">
+                     Heartwarming Interaction <img src='../Group_42/images/Decorative/paw.svg' alt='logo'>
+                  </div>
+                  <div class="desc-container">Relax, Play, Pet, Feed and interact with your cute companion in various ways.</div>
+              </div> 
+              <div>
+                <a href="#section3"><img class="double-down" src="../Group_42/images/Decorative/arrow.svg" alt="double down button"></a>
+              </div>
+     
+          </div>
+          <div class="imagebox" id="round-img-border">
+              <img src="../Group_42/images/Shiba/interact ui.svg" alt="Section 2 Image">
+          </div>
+      </div>
+  </section>
+
+  <section id="section3">
+    <div class="section-container">
+      <div class="imagebox" id="third-section">
+          <img src="../Group_42/images/Marketplace/Marketplace.jpg" alt="Section 3 Image">
+      </div>
+      <div class='content'>
+        <div class="text-container">
+          <div class="title-container">
+            <img src='../Group_42/images/Decorative/paw.svg' alt='logo'>Engaging Marketplace
+          </div>
+          <div class="desc-container">Buy food, items and power-ups here to level-up your beloved companion!</div>
+        </div>
+        <div class="image-and-button" >
+          <img src="../Group_42/images/Shiba/shiba pizza.svg" alt="shiba pizza">
+          <a href="#section4"><img style="height:60px" class="double-down" src="../Group_42/images/Decorative/arrow.svg" alt="double down button"></a>
+      </div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="bg2" id="section4">
+    <div class="section-container">
+        <div class='content'>
+            <div class="text-container">
+                <div class="title-container">
+                    Intuitive Petting Experience<img src='../Group_42/images/Decorative/paw.svg' alt='logo'>
+                </div>
+                <div class="desc-container">Enjoy the fun of having a lovely pet who listens and cares for you 24/7, anywhere and anytime.</div>
+            </div> 
+            <div class="image-and-button">
+              <img src="../Group_42/images/Shiba/shiba phone.svg">
+              <button class="button" onclick="location.href='../Group_42/create_account.html'">
+                START PETTING NOW!    
+                  <img src="../Group_42/images/Decorative/heart paw.svg" >
+                </button> 
+            </div>
+   
+        </div>
+        <div class="imagebox" id="round-img-bg">
+            <img src="../Group_42/images/Boy-hug-dog.svg" alt="Section 4 Image">
+        </div>
+    </div>
+</section>
+
+    
+<footer class="footer">
+  <div class="footer-buttons">
+    <a href="homepage.html" class="footer-button">SHIB.AI</a>
+    <a href="interaction.html" class="footer-button">INTERACTION</a>
+    <a href="marketplace.html" class="footer-button">MARKETPLACE</a>
+    <a href="about.html" class="footer-button">ABOUT US</a>
+    <a href="contactus.html" class="footer-button">CONTACT US</a>
+    <div id="social_media">
+      <b><p>SOCIAL MEDIA</p></b>
+      <a href="https://facebook.com" target="blank"><img src="../Group_42/images/Logo/fb-logo.svg" alt="Facebook" class="social-media-logo"></a>
+      <a href="https://instagram.com" target="blank"><img src="../Group_42/images/Logo/ig-logo.svg" alt="Instagram" class="social-media-logo"></a>
+      <a href="https://gmail.com" target="blank"><img src="../Group_42/images/Logo/gmail-logo.svg" alt="Email" class="social-media-logo"></a>
+    </div>
+  </div>
+  <p class="footer-text">Copyright© Web Fundamentals Group 42. All Rights Reserved.</p>
+</footer>
+
+  </body>
+
+  </html>
+
