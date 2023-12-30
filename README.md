@@ -4,4 +4,7 @@ We have utilized HTML, CSS, and intuitive JavaScript prompts to make our website
 
 Shib.Ai is an interactive virtual pet companion. You can feed and play with your pet anytime, anywhere! Also, you can buy power-ups, food, and cosmetics from the marketplace too!
 
+Feel free to check out the video below for an overview of the website!
+
+https://youtu.be/LDZzXob-eEQ
 
